@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXColorPicker?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaParametrizaçãoController">
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="450.0" minWidth="10.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="250.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="310.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="50.0" prefHeight="104.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXTextField fx:id="txnome" labelFloat="true" minWidth="400.0" promptText="Nome Fantasia(*)" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXColorPicker fx:id="cpcorfundo" prefWidth="150.0" promptText="Cor de Fundo" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </JFXColorPicker>
+            <JFXTextField fx:id="txrazao" labelFloat="true" layoutX="10.0" layoutY="122.0" promptText="Razão Social(*)" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbfonte" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Fonte" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="100.0" right="20.0" />
+               </GridPane.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="txemail" labelFloat="true" layoutX="10.0" layoutY="207.0" promptText="Email(*)" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txtelefone" labelFloat="true" layoutX="10.0" layoutY="377.0" promptText="Telefone(*)" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txsite" labelFloat="true" layoutX="10.0" layoutY="377.0" promptText="Site" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txrua" labelFloat="true" layoutX="10.0" layoutY="462.0" minWidth="400.0" promptText="Rua(*)" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbcidade" disable="true" editable="true" labelFloat="true" maxWidth="1.7976931348623157E308" promptText="Cidade(*)" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXComboBox>
+            <JFXTextField fx:id="txbairro" labelFloat="true" layoutX="10.0" layoutY="547.0" promptText="Bairro(*)" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txcep" labelFloat="true" layoutX="10.0" layoutY="562.0" promptText="CEP(*)" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="75.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <JFXTextField fx:id="txnumero" labelFloat="true" layoutX="810.0" layoutY="487.0" maxWidth="100.0" promptText="Nº(*)" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="50.0" right="20.0" />
+               </GridPane.margin>
+            </JFXTextField>
+            <ImageView fx:id="imvlogogrande" disable="true" fitHeight="618.0" fitWidth="1167.0" opacity="0.25" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowSpan="6" GridPane.valignment="CENTER" />
+            <Label text="Cor de Fundo" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets right="190.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fx:id="imvlogopequeno" fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowSpan="2">
+               <GridPane.margin>
+                  <Insets right="15.0" />
+               </GridPane.margin>
+            </ImageView>
+            <JFXButton onAction="#clkBtLogoGrande" text="Carregar logo grande" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+               <GridPane.margin>
+                  <Insets left="6.0" />
+               </GridPane.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton layoutX="1025.0" layoutY="149.0" onAction="#clkBtLogoPequeno" text="Carregar logo pequeno" GridPane.columnIndex="3" GridPane.halignment="LEFT">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton onAction="#clkBtVerificar" text="Verificar" visible="false" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="60.0" left="60.0" right="60.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="60.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Parametrização">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <GridPane prefHeight="90.0" prefWidth="1200.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <JFXButton onAction="#clkBtConfirmar" prefWidth="200.0" text="Confirmar" GridPane.columnIndex="1" />
+            <JFXButton layoutX="10.0" layoutY="25.0" onAction="#clkBtCancelar" prefWidth="200.0" text="Cancelar" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

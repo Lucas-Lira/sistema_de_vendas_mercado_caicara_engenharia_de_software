@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXScrollPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5865" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="742.0" prefWidth="987.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaClienteController">
+   <items>
+      <BorderPane maxHeight="430.0" minHeight="40.0" prefWidth="985.0">
+         <center>
+            <GridPane minHeight="0.0" minWidth="0.0" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="415.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="321.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="321.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="52.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txcodigo" disable="true" labelFloat="true" maxWidth="125.0" promptText="Código">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txnome" labelFloat="true" layoutX="10.0" layoutY="16.0" promptText="Nome(*)" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txcpf" labelFloat="true" layoutX="10.0" layoutY="59.0" promptText="CPF(*)" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtelefone" labelFloat="true" layoutX="10.0" layoutY="102.0" promptText="Telefone(*)" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txbairro" labelFloat="true" layoutX="10.0" layoutY="102.0" promptText="Bairro(*)" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txcep" labelFloat="true" layoutX="503.0" layoutY="145.0" promptText="CEP(*)" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="100.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txemail" labelFloat="true" layoutX="10.0" layoutY="124.0" promptText="Email(*)" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txrua" labelFloat="true" layoutX="40.0" layoutY="266.0" promptText="Rua(*)" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+                  <JFXButton fx:id="btcpf" onAction="#clkBtVerificar" text="Verificar" visible="false" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Verdana Bold" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXComboBox fx:id="cbcidade" disable="true" editable="true" maxWidth="1.7976931348623157E308" promptText="Cidade(*)" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </JFXComboBox>
+                  <JFXDatePicker fx:id="dpnasc" maxWidth="200.0" promptText="Data de Nascimento(*)" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </JFXDatePicker>
+                  <JFXTextField fx:id="txnumero" labelFloat="true" layoutX="701.0" layoutY="229.0" maxWidth="100.0" promptText="Nº(*)" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </JFXTextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </GridPane>
+         </center>
+         <top>
+            <VBox prefHeight="60.0" prefWidth="985.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" minHeight="40.0" prefHeight="23.0" prefWidth="985.0">
+                     <children>
+                        <Label text="Gerenciamento de Clientes">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <GridPane minHeight="50.0" style="-fx-background-color: #607D8B;">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <JFXButton fx:id="btnovo" onAction="#clkBtNovo" text="Novo" GridPane.columnIndex="1">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Verdana Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btalterar" onAction="#clkBtAlterar" text="Alterar" GridPane.columnIndex="2">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Verdana Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btapagar" onAction="#clkBtApagar" text="Apagar" GridPane.columnIndex="3">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Verdana Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btconfirmar" onAction="#clkBtConfirmar" text="Confirmar" GridPane.columnIndex="4">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Verdana Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btcancelar" onAction="#clkBtCancelar" text="Cancelar" GridPane.columnIndex="5">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <font>
+                              <Font name="Verdana Bold" size="16.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </top>
+      </BorderPane>
+      <BorderPane minHeight="0.0" prefHeight="211.0" prefWidth="985.0">
+         <top>
+            <HBox alignment="CENTER_LEFT" maxHeight="50.0" minHeight="50.0" prefHeight="50.0" prefWidth="898.0" spacing="20.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXRadioButton fx:id="rbtnome" selected="true" text="Nome">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="unique" />
+                     </toggleGroup>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXRadioButton>
+                  <JFXRadioButton text="CPF" toggleGroup="$unique">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXRadioButton>
+                  <JFXTextField fx:id="txpesquisar" prefWidth="300.0" promptText="   Informação sobre o(a) cliente" style="-fx-background-color: lightgray;">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </JFXTextField>
+                  <JFXButton onAction="#clkBtPesquisar" text="Pesquisar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btselecionar" layoutX="398.0" layoutY="22.0" onAction="#clkBtSelecionar" text="Selecionar">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Verdana Bold" size="16.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </HBox>
+         </top>
+         <center>
+            <JFXScrollPane minHeight="0.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tvcliente" prefHeight="251.0">
+                     <columns>
+                        <TableColumn fx:id="colcodigo" maxWidth="60.0" minWidth="60.0" prefWidth="75.0" text="Código" />
+                        <TableColumn fx:id="colnome" minWidth="200.0" prefWidth="75.0" text="Nome" />
+                        <TableColumn fx:id="coldtnasc" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Dt. Nasc." />
+                        <TableColumn fx:id="colcpf" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="CPF" />
+                        <TableColumn fx:id="coltelefone" maxWidth="120.0" minWidth="120.0" prefWidth="75.0" text="Telefone" />
+                        <TableColumn fx:id="colemail" maxWidth="280.0" minWidth="280.0" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="colendereco" maxWidth="-1.0" minWidth="150.0" prefWidth="-1.0" text="Endereço">
+                           <columns>
+                              <TableColumn fx:id="colrua" minWidth="280.0" prefWidth="75.0" text="Rua" />
+                              <TableColumn fx:id="colnum" minWidth="-1.0" prefWidth="75.0" text="Nº" />
+                              <TableColumn fx:id="colbairro" minWidth="150.0" prefWidth="75.0" text="Bairro" />
+                              <TableColumn fx:id="colcep" minWidth="120.0" prefWidth="75.0" text="CEP" />
+                              <TableColumn fx:id="colcidade" minWidth="200.0" prefWidth="75.0" text="Cidade" />
+                           </columns></TableColumn>
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </JFXScrollPane>
+         </center>
+      </BorderPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="688.0" stylesheets="@css/jfoenix-components.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaMenuController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="688.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="tituloprincipal" text="Mercado Caiçara" textFill="#fcf7f7">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </top>
+   <left>
+      <Accordion prefHeight="378.0" prefWidth="162.0" style="-fx-background-color: #B0BEC5;" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane fx:id="titconfiguracoes" animated="false" style="-fx-background-color: #607D8B;" text="Configurações" textFill="#fffbfb">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="itcliente" onMouseClicked="#clkItemCliente" text="Cliente" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itfornecedor" layoutX="20.0" layoutY="20.0" onMouseClicked="#clkItemFornecedor" text="Fornecedor" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itdespesa" layoutX="20.0" layoutY="71.0" onMouseClicked="#clkItemDespesa" text="Despesa" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="ittipodedespesa" layoutX="20.0" layoutY="88.0" onMouseClicked="#clkItemTipoDespesa" text="Tipo de Despesa" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+          <TitledPane fx:id="titprodutos" animated="false" style="-fx-background-color: #607D8B;" text="Produto" textFill="#fffbfb">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="itproduto" onMouseClicked="#clkItemProduto" text="Produto" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="ittipodeproduto" onMouseClicked="#clkItemTipoProduto" text="Tipo de Produto" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itcomprarproduto" layoutX="20.0" layoutY="37.0" onMouseClicked="#clkItemComprarProduto" text="Comprar Produtos" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itconsultarcompra" layoutX="20.0" layoutY="54.0" onMouseClicked="#clkItemConsultarCompra" text="Consultar Compra" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itvenderproduto" layoutX="20.0" layoutY="54.0" onMouseClicked="#clkItemVenderProduto" text="Vender Produtos" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrecebervenda" layoutX="20.0" layoutY="71.0" onMouseClicked="#clkItemReceberVenda" text="Receber Venda" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="titrelatorios" animated="false" layoutX="10.0" layoutY="35.0" style="-fx-background-color: #607D8B;" text="Relatórios" textFill="#fffbfb">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="itrelatorioestoque" onMouseClicked="#clkItemRelEstoque" text="Estoque dos Produtos" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrelatoriovendasdiarias" layoutX="20.0" layoutY="20.0" onMouseClicked="#clkItemRelVendasDiarias" text="Vendas Diárias" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrelatoriovencimentodespesa" layoutX="20.0" layoutY="37.0" onMouseClicked="#clkItemRelVencimentoDespesas" text="Vencimento de Despesas" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrelatoriofluxocaixa" layoutX="20.0" layoutY="54.0" onMouseClicked="#clkItemRelFluxoCaixa" text="Fluxo de Caixa" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrelatoriofaturamento" layoutX="20.0" layoutY="71.0" onMouseClicked="#clkItemRelFaturamento" text="Faturamento" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+            <TitledPane fx:id="titutilitarios" animated="false" layoutX="10.0" layoutY="35.0" prefHeight="303.0" prefWidth="153.0" style="-fx-background-color: #607D8B;" text="Utilitários" textFill="#fffbfb">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="itfuncionario" onMouseClicked="#clkItemFuncionario" text="Funcionário" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itlancarfrequenciafunc" layoutX="20.0" layoutY="20.0" onMouseClicked="#clkItemLancarFrequenciaFunc" text="Lançar Frequência Func." textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itabrircaixa" layoutX="20.0" layoutY="20.0" onMouseClicked="#clkItemAbrirCaixa" text="Abrir Caixa" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itfecharcaixa" layoutX="20.0" layoutY="71.0" onMouseClicked="#clkItemFecharCaixa" text="Fechar Caixa" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itbackup" layoutX="20.0" layoutY="20.0" onMouseClicked="#clkItemBackup" text="Backup" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itrestore" layoutX="20.0" layoutY="37.0" onMouseClicked="#clkItemRestore" text="Restore" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <Label fx:id="itparametrizacao" layoutX="20.0" layoutY="105.0" onMouseClicked="#clkItemParametrizacao" text="Parametrização" textFill="#fffbfb">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </VBox>
+               </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <center>
+      <ScrollPane fx:id="pncentral" prefHeight="200.0" prefWidth="575.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="688.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="btelainicial" onAction="#clkTelaInicial" prefHeight="25.0" prefWidth="70.0" text=" " textFill="#f2eeee">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bsair" layoutX="521.0" layoutY="17.0" onAction="#clkSair" prefHeight="25.0" prefWidth="70.0" text=" " textFill="#f2eeee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></HBox>
+   </bottom>
+</BorderPane>

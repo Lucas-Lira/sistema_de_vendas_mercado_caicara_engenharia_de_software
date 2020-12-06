@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1204.0" stylesheets="@css/jfoenix-components.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaComprarProdutosController">
+   <items>
+      <TabPane fx:id="tabprincipal" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabComprarProdutos" text="Compra de Produtos">
+               <content>
+                  <SplitPane dividerPositions="0.46293888166449937" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                     <items>
+                        <VBox fx:id="pndados" prefHeight="305.0" prefWidth="834.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="54.0" prefWidth="1198.0" spacing="70.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXButton fx:id="bconfirmar" layoutX="100.0" layoutY="10.0" onAction="#clkConfirmar" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bapagar" layoutX="526.0" layoutY="25.0" onAction="#clkApagar" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelar" layoutX="145.0" layoutY="10.0" onAction="#clkCancelar" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <GridPane prefHeight="280.0" prefWidth="1178.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="640.0" minWidth="10.0" prefWidth="640.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="555.0" minWidth="10.0" prefWidth="477.0" />
+                                    <ColumnConstraints />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="68.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="84.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <JFXTextField fx:id="txcodigo" editable="false" labelFloat="true" maxWidth="-Infinity" minHeight="5.0" minWidth="10.0" prefHeight="25.0" prefWidth="300.0" promptText="Código" GridPane.rowIndex="1">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding></JFXTextField>
+                                    <Label fx:id="tituloprincipal" text="Dados da Compra" GridPane.columnSpan="3" GridPane.halignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXComboBox fx:id="cbfornecedor" labelFloat="true" minWidth="600.0" promptText="* Fonecedor" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.rowIndex="3">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <children>
+                                          <Label fx:id="lbdtoperacao" text="* Data da Operação:">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin></Label>
+                                          <JFXDatePicker fx:id="dtoperacao" prefHeight="25.0" prefWidth="187.0" promptText="* Data da Operação" style="-fx-background-color: lightgray;">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </JFXDatePicker>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" spacing="50.0" GridPane.rowIndex="4">
+                                       <GridPane.margin>
+                                          <Insets left="5.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <JFXTextField fx:id="txvalortotal" editable="false" focusColor="#0dea23" labelFloat="true" maxWidth="-Infinity" minHeight="5.0" minWidth="10.0" prefHeight="25.0" prefWidth="200.0" promptText="Valor Total" unFocusColor="#0dea23">
+                                             <padding>
+                                                <Insets left="5.0" />
+                                             </padding>
+                                          </JFXTextField>
+                                          <JFXButton fx:id="bgerarparcelas" onAction="#clkGerarParcelas" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa" prefHeight="318.0" prefWidth="834.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="91.0" prefWidth="1198.0" spacing="10.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txdescricaoproduto" editable="false" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="230.0" promptText="Desc. Produto" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txqtdeprodutoestoque" alignment="CENTER" editable="false" focusColor="#f9fafc" labelFloat="true" layoutX="485.0" layoutY="35.0" prefHeight="25.0" prefWidth="125.0" promptText="Qtde. Estoque" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txvalorunitprodutocadastrado" alignment="CENTER" editable="false" focusColor="#f9fafc" labelFloat="true" layoutX="615.0" layoutY="35.0" prefHeight="25.0" prefWidth="140.0" promptText="Valor Unitário Cad." style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXButton fx:id="bpesquisarproduto" layoutX="810.0" layoutY="54.0" onAction="#clkPesquisarProduto" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXTextField fx:id="txqtdeproduto" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" layoutX="230.0" layoutY="29.0" prefHeight="25.0" prefWidth="120.0" promptText="* Quantidade" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txvalorunitproduto" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" layoutX="385.0" layoutY="54.0" prefHeight="25.0" prefWidth="120.0" promptText="* Valor Unitário" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="cbfileira" focusColor="#f9fafc" labelFloat="true" onAction="#clkSelecionaFileira" prefHeight="25.0" prefWidth="107.0" promptText="* Fileira" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <JFXComboBox fx:id="cbprateleira" focusColor="#f9fafc" labelFloat="true" layoutX="971.0" layoutY="35.0" prefHeight="25.0" prefWidth="107.0" promptText="* Prateleira" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <JFXButton fx:id="baddproduto" onAction="#clkAddProduto" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bdelproduto" layoutX="10.0" layoutY="10.0" onAction="#clkDelProduto" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="91.0" prefWidth="1198.0" spacing="10.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <Label text="Inf. do Lote:" textFill="#f5efef">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <JFXTextField fx:id="txlote" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="108.0" promptText="* Num. Lote" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                    <JFXDatePicker fx:id="dtfabricacao" prefHeight="25.0" prefWidth="165.0" promptText="* Data de Fabricação" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXDatePicker>
+                                    <JFXDatePicker fx:id="dtvencimento" layoutX="233.0" layoutY="23.0" prefHeight="25.0" prefWidth="165.0" promptText="* Data de Vencimento" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXDatePicker>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="351.0" prefWidth="1300.0">
+                                 <content>
+                                    <AnchorPane prefHeight="348.0" prefWidth="1400.0">
+                                       <children>
+                                          <TableView fx:id="tabelaprod" prefHeight="729.0" prefWidth="2300.0">
+                                             <columns>
+                                                <TableColumn fx:id="colcodigo" prefWidth="100.0" text="Código" />
+                                                <TableColumn fx:id="coldescricao" prefWidth="550.0" text="Descrição" />
+                                                <TableColumn fx:id="colvalorunit" prefWidth="200.0" text="Valor Unitário" />
+                                                <TableColumn fx:id="colqtde" prefWidth="250.0" text="Qtde Disponível" />
+                                                <TableColumn fx:id="colcodigotipo" prefWidth="150.0" text="Cód. Tipo" />
+                                                <TableColumn fx:id="coldescricaotipo" prefWidth="350.0" text="Descrição do Tipo" />
+                                                <TableColumn fx:id="collote" prefWidth="150.0" text="Lote" />
+                                                <TableColumn fx:id="collotedtfabric" prefWidth="150.0" text="Dt. Fabric. Lote" />
+                                                <TableColumn fx:id="collotedtvenc" prefWidth="150.0" text="Dt. Venc. Lote" />
+                                                <TableColumn fx:id="colfileira" prefWidth="150.0" text="Fileira" />
+                                                <TableColumn fx:id="colprateleira" prefWidth="100.0" text="Prateleira" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabConsultaProduto" text="Consulta de Produto">
+               <content>
+                  <SplitPane dividerPositions="0.07028753993610223" orientation="VERTICAL" prefHeight="358.0" prefWidth="834.0">
+                     <items>
+                        <VBox fx:id="pndados2" alignment="TOP_CENTER" prefHeight="262.0" prefWidth="689.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal2" text="Consultar Produto" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa2" prefHeight="323.0" prefWidth="620.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1198.0" spacing="5.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txinformacaoconsultprod" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="760.0" promptText="Informação" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="cbfiltroconsultprod" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="252.0" promptText="Filtro" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding></JFXComboBox>
+                                    <JFXButton fx:id="bconsultarproduto" onAction="#clkConsultarProduto" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bselecionar" layoutX="10.0" layoutY="10.0" onAction="#clkSelecionarProduto" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelarconsultaprod" layoutX="587.0" layoutY="25.0" onAction="#clkCancelarConsultaProd" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="626.0" prefWidth="800.0">
+                                 <content>
+                                    <AnchorPane prefHeight="701.0" prefWidth="1800.0">
+                                       <children>
+                                          <TableView fx:id="tabelaconsultprod" layoutX="-6.0" prefHeight="729.0" prefWidth="2300.0">
+                                             <columns>
+                                                <TableColumn fx:id="colconsutaprodutocodigo" prefWidth="100.0" text="Código" />
+                                                <TableColumn fx:id="colconsutaprodutodescricao" prefWidth="550.0" text="Descrição" />
+                                                <TableColumn fx:id="colconsutaprodutovalorunit" prefWidth="200.0" text="Valor Unitário" />
+                                                <TableColumn fx:id="colconsutaprodutoqtde" prefWidth="250.0" text="Qtde Disponível" />
+                                                <TableColumn fx:id="colconsutaprodutocodigotipo" prefWidth="150.0" text="Cód. Tipo" />
+                                                <TableColumn fx:id="colconsutaprodutodescricaotipo" prefWidth="350.0" text="Descrição do Tipo" />
+                                                <TableColumn fx:id="colconsutaprodutolote" prefWidth="150.0" text="Lote" />
+                                                <TableColumn fx:id="colconsutaprodutolotedtfabric" prefWidth="150.0" text="Dt. Fabric. Lote" />
+                                                <TableColumn fx:id="colconsutaprodutolotedtvenc" prefWidth="150.0" text="Dt. Venc. Lote" />
+                                                <TableColumn fx:id="colconsutaprodutofileira" prefWidth="150.0" text="Fileira" />
+                                                <TableColumn fx:id="colconsutaprodutoprateleira" prefWidth="100.0" text="Prateleira" />
+                                             </columns>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabGerarParcelas" text="Gerar Parcelas">
+               <content>
+                  <SplitPane dividerPositions="0.26918075422626786" orientation="VERTICAL" prefHeight="358.0" prefWidth="834.0">
+                     <items>
+                        <VBox fx:id="pndados3" alignment="TOP_CENTER" prefHeight="262.0" prefWidth="689.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal3" text="Gerar Parcelas" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="115.0" prefWidth="1286.0" spacing="20.0">
+                                 <children>
+                                    <JFXComboBox fx:id="cbtipogeracaoparcelas" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="600.0" promptText="* Tipo de Geração" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXTextField fx:id="txparcelavalortotal" editable="false" focusColor="#0dea23" labelFloat="true" maxWidth="-Infinity" minHeight="5.0" minWidth="10.0" prefHeight="25.0" prefWidth="136.0" promptText="Valor à Parcelar" style="-fx-background-color: lightgray;" unFocusColor="#0dea23">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXButton fx:id="bconfirmarparcelas" onAction="#clkConfirmarParcelas" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelarparcelas" onAction="#clkCancelarParcelas" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="40.0" prefHeight="115.0" prefWidth="1286.0" spacing="20.0">
+                                 <children>
+                                    <JFXComboBox fx:id="cbformapagamento" focusColor="#f9fafc" labelFloat="true" minWidth="600.0" promptText="* Forma de Pagamento" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </JFXComboBox>
+                                    <JFXComboBox fx:id="cbqtdeparcelas" focusColor="#f9fafc" labelFloat="true" minWidth="300.0" promptText="* Qtde de Parcelas" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <JFXTextField fx:id="txdiapagamento" focusColor="#f9fafc" labelFloat="true" maxWidth="-Infinity" minHeight="5.0" minWidth="10.0" prefHeight="25.0" prefWidth="300.0" promptText="Dia do Pagamento (1 a 31)" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa3" alignment="CENTER" prefHeight="323.0" prefWidth="620.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal3_2" text="Dados - Geração Manual" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="109.0" prefWidth="1202.0" spacing="20.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txparceladescricao" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="840.0" promptText="* Descrição" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txparcelavalor" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" layoutX="15.0" layoutY="20.0" prefHeight="25.0" prefWidth="120.0" promptText="* Valor" style="-fx-background-color: lightgray;" />
+                                    <JFXDatePicker fx:id="dtvencimentoparcela" promptText="* Data Vencimento" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXDatePicker>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="109.0" prefWidth="1202.0" spacing="20.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txparcelajuros" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="120.0" promptText="* Valor de Juros" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="txparcelavalorpagto" alignment="CENTER" focusColor="#f9fafc" labelFloat="true" layoutX="15.0" layoutY="20.0" prefHeight="25.0" prefWidth="120.0" promptText="* Valor Pagto." style="-fx-background-color: lightgray;" />
+                                    <JFXDatePicker fx:id="dtpagamentoparcela" promptText="* Data Pagto." style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXDatePicker>
+                                    <JFXButton fx:id="baddparcela" onAction="#clkAddParcela" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="510.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="balterarparcela" layoutX="491.0" layoutY="20.0" onAction="#clkAlterarParcela" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bdelparcela" onAction="#clkDelParcela" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="447.0" prefWidth="1202.0">
+                                 <content>
+                                    <AnchorPane prefHeight="701.0" prefWidth="1800.0">
+                                       <children>
+                                          <TableView fx:id="tabelageraparcelas" layoutX="-6.0" prefHeight="729.0" prefWidth="1802.0">
+                                             <columns>
+                                                <TableColumn fx:id="colgeraparcelascodigo" prefWidth="150.0" text="Código" />
+                                                <TableColumn fx:id="colgeraparcelasdatavencimento" prefWidth="200.0" text="Data Vencimento" />
+                                                <TableColumn fx:id="colgeraparcelasvalor" prefWidth="200.0" text="Valor" />
+                                                <TableColumn fx:id="colgeraparcelasdescrição" prefWidth="650.0" text="Descrição" />
+                                                <TableColumn fx:id="colgeraparcelasvalorjuros" prefWidth="200.0" text="Valor de Juros" />
+                                                <TableColumn fx:id="colgeraparcelasvalorpagamento" prefWidth="200.0" text="Valor Pagamento" />
+                                                <TableColumn fx:id="colgeraparcelasdatapagamento" prefWidth="200.0" text="Data Pagamento" />
+                                             </columns>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabConsultaCompra" text="Consultar Compra">
+               <content>
+                  <SplitPane dividerPositions="0.07028753993610223" orientation="VERTICAL" prefHeight="358.0" prefWidth="834.0">
+                     <items>
+                        <VBox fx:id="pndados4" alignment="TOP_CENTER" prefHeight="262.0" prefWidth="689.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal4" text="Consultar Compra" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa4" prefHeight="323.0" prefWidth="620.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1198.0" spacing="5.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txinformacaoconsultcompra" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="760.0" promptText="Informação" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="cbfiltroconsultcompra" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="252.0" promptText="Filtro" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <JFXButton fx:id="bconsultarcompra" onAction="#clkConsultarCompra" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bselecionarcompra" layoutX="10.0" layoutY="10.0" onAction="#clkSelecionarCompra" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelarconsultacompra" layoutX="587.0" layoutY="25.0" onAction="#clkCancelarConsultaCompra" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="626.0" prefWidth="800.0">
+                                 <content>
+                                    <AnchorPane prefHeight="701.0" prefWidth="1800.0">
+                                       <children>
+                                          <TableView fx:id="tabelaconsultacompra" layoutX="-6.0" prefHeight="729.0" prefWidth="1802.0">
+                                             <columns>
+                                                <TableColumn fx:id="colconsutacodigocompra" prefWidth="100.0" text="Código" />
+                                                <TableColumn fx:id="colconsutacompradata" prefWidth="200.0" text="Data" />
+                                                <TableColumn fx:id="colconsutacompravalortotal" prefWidth="250.0" text="Valor Total" />
+                                                <TableColumn fx:id="colconsutacompracodigofornecedor" prefWidth="150.0" text="Cód. Fornecedor" />
+                                                <TableColumn fx:id="colconsutacompranomefornecedor" prefWidth="800.0" text="Nome Fornecedor" />
+                                                <TableColumn fx:id="colconsutacompracnpjfornecedor" prefWidth="300.0" text="CNPJ Fornecedor" />
+                                             </columns>
+                                             <padding>
+                                                <Insets left="15.0" />
+                                             </padding>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </items>
+</SplitPane>

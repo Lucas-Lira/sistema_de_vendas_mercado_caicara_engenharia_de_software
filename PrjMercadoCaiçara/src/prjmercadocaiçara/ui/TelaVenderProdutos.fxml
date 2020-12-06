@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="1169.0" stylesheets="@css/jfoenix-components.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaVenderProdutosController">
+   <items>
+      <TabPane fx:id="tabprincipal" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabvenderprodutos" text="Vender Produtos">
+               <content>
+                  <BorderPane prefHeight="476.0" prefWidth="525.0">
+                     <center>
+                        <BorderPane prefHeight="680.0" prefWidth="1198.0" BorderPane.alignment="CENTER">
+                           <top>
+                              <VBox fx:id="pndados" prefHeight="208.0" prefWidth="1198.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="26.0" prefWidth="1198.0" spacing="50.0" style="-fx-background-color: #607D8B;">
+                                       <children>
+                                          <JFXButton fx:id="bnovavenda" onAction="#evtCadastrarNovaVenda" text=" " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="balterartelavenda" onAction="#evtAlterarVendaProduto" prefHeight="25.0" prefWidth="77.0" text=" " />
+                                          <JFXButton fx:id="bestornovenda" onAction="#evtEstornarVenda" prefHeight="25.0" prefWidth="77.0" style="-fx-background-color: #607D8B;" text=" " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="bcancelarvendavender" layoutX="586.0" layoutY="17.0" onAction="#evtCancelarVenderProdutos" prefHeight="25.0" prefWidth="30.0" text=" " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </HBox>
+                                    <GridPane prefHeight="137.0" prefWidth="1178.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="562.0" minWidth="10.0" prefWidth="247.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="562.0" minWidth="10.0" prefWidth="181.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="614.0" minWidth="10.0" prefWidth="221.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="614.0" minWidth="10.0" prefWidth="363.0" />
+                                          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="173.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="59.0" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                             <children>
+                                                <JFXButton fx:id="bgerarparcelasvenda" onAction="#evtGerarParcelasvendas" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #607D8B;" text=" " />
+                                             </children>
+                                          </VBox>
+                                          <JFXTextField fx:id="txcodigovenda" labelFloat="true" prefHeight="25.0" prefWidth="296.0" promptText="Código Venda" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </JFXTextField>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXComboBox fx:id="cbfuncionariovenda" labelFloat="true" prefHeight="25.0" prefWidth="244.0" promptText="* Funcionário">
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                </JFXComboBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXDatePicker fx:id="dtpdatavenda" disable="true" prefHeight="25.0" prefWidth="212.0" promptText="Data Venda" />
+                                             </children>
+                                          </VBox>
+                                          <JFXTextField fx:id="txvalortotalvenda" editable="false" labelFloat="true" promptText="* Ven. Valor Total" text="0.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </JFXTextField>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <children>
+                                                <JFXComboBox fx:id="cbformaspagamentovendas" labelFloat="true" onAction="#evtComboboxFormaPagamento" prefHeight="25.0" prefWidth="201.0" promptText="* Formas de Pagamento" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="2">
+                                             <children>
+                                                <Label fx:id="tituloprincipal" text="Vender Produtos">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </VBox>
+                                          <JFXTextField fx:id="txnumparcelasvendas" labelFloat="true" promptText="* N° Parcelas" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </GridPane.margin>
+                                          </JFXTextField>
+                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
+                                             <children>
+                                                <JFXComboBox fx:id="cbclientesvenda" labelFloat="true" prefHeight="25.0" prefWidth="234.0" promptText="* Clientes" />
+                                             </children>
+                                          </VBox>
+                                          <JFXButton fx:id="bselecionarvendavenda" onAction="#evtBuscarVenda" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #607D8B;" text=" " textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </top>
+                           <center>
+                              <VBox fx:id="pnpesquisa" minHeight="100.0" prefHeight="292.0" prefWidth="1198.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1198.0" spacing="10.0" style="-fx-background-color: #607D8B;">
+                                       <children>
+                                          <JFXTextField fx:id="txcodigoprodutovenda" editable="false" labelFloat="true" minHeight="5.0" minWidth="5.0" prefHeight="25.0" prefWidth="101.0" promptText="Código Produto" style="-fx-background-color: white;" />
+                                          <JFXTextField fx:id="txdescricaoprodutovenda" editable="false" labelFloat="true" minHeight="5.0" prefHeight="25.0" prefWidth="478.0" promptText="Descrição" style="-fx-background-color: white;" />
+                                          <JFXTextField fx:id="txvalorunidadeprodutovenda" editable="false" labelFloat="true" prefHeight="25.0" prefWidth="109.0" promptText="Valor Unidade" style="-fx-background-color: white;" />
+                                          <JFXTextField fx:id="txestoquevenda" editable="false" labelFloat="true" layoutX="592.0" layoutY="41.0" prefHeight="25.0" prefWidth="166.0" promptText="Qtde. Estoque" style="-fx-background-color: white;" />
+                                          <JFXTextField fx:id="txqtdprodutovenda" labelFloat="true" prefHeight="25.0" prefWidth="150.0" promptText="Quantidade" style="-fx-background-color: white;" />
+                                          <JFXButton fx:id="bconsultarprodutovenda" onAction="#evtBuscarProduto" prefWidth="50.0" style="-fx-background-color: #607D8B;" text=" " textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="baddprodutovenda" onAction="#evtAdicionarProdutoLista" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="15.0" />
+                                             </HBox.margin>
+                                          </JFXButton>
+                                          <JFXButton fx:id="bdelprodutovenda" layoutX="10.0" layoutY="10.0" onAction="#evtRemoverProdutoLista" prefWidth="50.0" text=" " textFill="#fcfafa">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </HBox>
+                                    <ScrollPane prefHeight="264.0" prefWidth="1198.0">
+                                       <content>
+                                          <AnchorPane prefHeight="225.0" prefWidth="1210.0">
+                                             <children>
+                                                <TableView fx:id="tabela_vender_produtos" layoutY="-2.0" prefHeight="261.0" prefWidth="1200.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="colcodprodvenda" minWidth="5.0" prefWidth="146.0" text="Prod. Cód" />
+                                                      <TableColumn fx:id="colcoddescricaovenda" prefWidth="587.0" text="Prod. Descrição" />
+                                                      <TableColumn fx:id="colvalorunidadevenda" prefWidth="322.0" text="Valor Unidade" />
+                                                      <TableColumn fx:id="colqtdvenda" minWidth="3.0" prefWidth="96.0" text="Quantidade" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </VBox>
+                           </center>
+                           <bottom>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <center>
+                                    <ScrollPane prefHeight="203.0" prefWidth="1198.0" BorderPane.alignment="CENTER">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="281.0" prefWidth="1203.0">
+                                             <children>
+                                                <TableView fx:id="tabelaparcelasvenderprodutos" prefHeight="281.0" prefWidth="1183.0">
+                                                   <columns>
+                                                      <TableColumn fx:id="colcodparcelavender" prefWidth="133.0" text="Cód. Parcela" />
+                                                      <TableColumn fx:id="colparceladescricaovender" prefWidth="547.0" text="Descrição" />
+                                                      <TableColumn fx:id="colvalorparcelavender" prefWidth="91.0" text="Valor" />
+                                                      <TableColumn fx:id="coldatavenctovender" prefWidth="131.0" text="Data de Vencimento" />
+                                                      <TableColumn fx:id="coldatacaixavender" prefWidth="125.0" text="Código do Caixa" />
+                                                      <TableColumn fx:id="colcodfuncionariovender" prefWidth="155.0" text="Código do Funcionário" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </center>
+                                 <top>
+                                    <VBox alignment="CENTER" prefHeight="22.0" prefWidth="1198.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label text="Parcelas Geradas">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </top>
+                              </BorderPane>
+                           </bottom>
+                        </BorderPane>
+                     </center>
+                     <bottom>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="28.0" prefWidth="1198.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
+                           <children>
+                              <JFXButton fx:id="bconfirmarvenda" onAction="#evtConfirmarVendaProduto" prefHeight="25.0" prefWidth="43.0" text=" " textFill="WHITE">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="bsairvenda" layoutX="1055.0" layoutY="39.0" onAction="#evtRetornarInicio" prefHeight="34.0" prefWidth="54.0" text=" " textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab fx:id="tabconsultarproduto" text="Consultar Produto">
+               <content>
+                  <SplitPane dividerPositions="0.07028753993610223" orientation="VERTICAL" prefHeight="358.0" prefWidth="834.0">
+                     <items>
+                        <VBox fx:id="pndados2" alignment="TOP_CENTER" prefHeight="262.0" prefWidth="689.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal2" text="Consultar Produto" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa2" prefHeight="323.0" prefWidth="620.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1198.0" spacing="5.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txinformacaoproduto" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="759.0" promptText="Informação" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="cbfiltroproduto" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="252.0" promptText="Filtro" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding></JFXComboBox>
+                                    <JFXButton fx:id="bconsultarproduto" onAction="#evtConsultarProduto" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bselecionarproduto" layoutX="10.0" layoutY="10.0" onAction="#evtSelecionarProduto" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelarproduto" layoutX="587.0" layoutY="25.0" onAction="#evtCancelarConsultaProduto" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="626.0" prefWidth="800.0">
+                                 <content>
+                                    <AnchorPane prefHeight="701.0" prefWidth="1800.0">
+                                       <children>
+                                          <TableView fx:id="tabelaconsultaprodutovender" layoutX="-1.0" prefHeight="729.0" prefWidth="1186.0">
+                                             <columns>
+                                                <TableColumn fx:id="colcodigoproduto" prefWidth="144.0" text="Código" />
+                                                <TableColumn fx:id="coldescricaoproduto" prefWidth="458.0" text="Descrição" />
+                                                <TableColumn fx:id="colvalorunidadeproduto" prefWidth="212.0" text="Valor Unidade" />
+                                                <TableColumn fx:id="colquantidadeestoque" prefWidth="178.0" text="Quantidade em Estoque" />
+                                                <TableColumn fx:id="colcodigotipoproduto" prefWidth="198.0" text="Código Tipo Produto" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabconsultarvenda" text="Consultar Venda">
+               <content>
+                  <SplitPane dividerPositions="0.07028753993610223" orientation="VERTICAL" prefHeight="358.0" prefWidth="834.0">
+                     <items>
+                        <VBox fx:id="pndados21" alignment="TOP_CENTER" prefHeight="262.0" prefWidth="689.0" style="-fx-background-color: #607D8B;">
+                           <children>
+                              <Label fx:id="tituloprincipal21" text="Consultar Venda" textFill="#fffdfd">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="pnpesquisa21" prefHeight="673.0" prefWidth="1167.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="1198.0" spacing="5.0" style="-fx-background-color: #607D8B;">
+                                 <children>
+                                    <JFXTextField fx:id="txinformacaovenda" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="760.0" promptText="Informação" style="-fx-background-color: lightgray;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" />
+                                       </HBox.margin>
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXTextField>
+                                    <JFXComboBox fx:id="cbfiltrovenda" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="252.0" promptText="Filtro" style="-fx-background-color: lightgray;">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                    </JFXComboBox>
+                                    <JFXButton fx:id="bconsultarvenda" onAction="#evtConsultarVenda" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bselecionarvenda" layoutX="10.0" layoutY="10.0" onAction="#evtSelecionarVenda" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                    <JFXButton fx:id="bcancelarvenda" layoutX="587.0" layoutY="25.0" onAction="#evtCancelarConsultaVenda" prefWidth="50.0" text=" " textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                              <ScrollPane prefHeight="600.0" prefWidth="800.0">
+                                 <content>
+                                    <AnchorPane prefHeight="600.0" prefWidth="1800.0">
+                                       <children>
+                                          <TableView fx:id="tabelaconsultarvenda" prefHeight="600.0" prefWidth="1796.0">
+                                             <columns>
+                                                <TableColumn fx:id="colcodvendacosultavenda" prefWidth="163.0" text="Código Venda" />
+                                                <TableColumn fx:id="colcodclienteconsultavenda" prefWidth="196.0" text="Código Cliente" />
+                                                <TableColumn fx:id="colcodigofuncionarioconsultavenda" prefWidth="185.0" text="Código Funcionário" />
+                                                <TableColumn fx:id="colformadepagamentoconsultarvenda" prefWidth="486.0" text="Forma de Pagamento" />
+                                                <TableColumn fx:id="colvalortotalconsultarvenda" prefWidth="150.0" text="Valor Total" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </VBox>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </items>
+</SplitPane>

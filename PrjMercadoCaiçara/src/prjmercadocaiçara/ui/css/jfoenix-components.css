@@ -1,0 +1,449 @@
+
+.table-view
+{
+    -fx-table-color: rgba(0, 255, 0, 0.6);
+    -fx-table-rippler-color: rgba(255, 255, 0, 0.4);
+}
+
+.table-view:focused .table-row-cell:selected
+{
+    -fx-background-color: -fx-table-color;
+    -fx-table-cell-border-color: -fx-table-color;
+    -fx-text-fill: BLACK;
+}
+
+.table-view:focused .table-row-cell:selected .table-cell
+{
+    -fx-text-fill: BLACK;
+}
+
+.table-view .jfx-rippler
+{
+    -jfx-rippler-fill: -fx-table-rippler-color;
+}
+
+.table-view .column-header,
+.table-view .column-header-background,
+.table-view .column-header-background .filler
+{
+    -fx-background-color: TRANSPARENT;
+}
+
+.table-view .column-header
+{
+    -fx-border-width: 0 1 0 1;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .column-header .label
+{
+    -fx-text-fill: #101010;
+    -fx-padding: 16 0 16 0;
+}
+
+.table-view .column-header .arrow, .table-view .column-header .sort-order-dot
+{
+    -fx-background-color: #949494;
+}
+
+.table-view .column-header:last-visible
+{
+    -fx-border-width: 0 2 0 1;
+}
+
+.table-view .column-header-background
+{
+    -fx-border-width: 0 0.0 1 0;
+    -fx-border-color: #F3F3F3;
+}
+
+.table-view .table-cell
+{
+    -fx-border-width: 0 0 0 0;
+    -fx-padding: 12 0 12 0;
+}
+
+.table-view .column-overlay
+{
+    -fx-background-color: -fx-table-color;
+}
+
+.table-view .column-resize-line, .table-view .column-drag-header
+{
+    -fx-background-color: -fx-table-rippler-color;
+}
+
+.table-view:focused
+{
+    -fx-background-color: -fx-table-color, -fx-box-border, -fx-control-inner-background;
+    -fx-background-insets: -1.4, 0, 1;
+    -fx-background-radius: 1.4, 0, 0;
+    /*....*/
+    -fx-padding: 1; /* 0.083333em; */
+}
+
+.table-row-cell > .disclosure-node > .arrow
+{
+    -fx-background-color: -fx-text-fill;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+
+.table-row-cell .jfx-text-field
+{
+    -fx-focus-color: rgba(240, 40, 40,0.5);
+}
+
+.table-row-group
+{
+    -fx-background-color: rgba(230, 230, 230, 1);
+}
+
+.accordion .titled-pane .title
+{
+    -fx-background-color: transparent ;
+}
+
+.accordion .titled-pane .arrow
+{
+    -fx-background-color: #00796B;
+}
+
+.accordion .titled-pane > *.content
+{
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+}
+
+.scrollpane
+{
+    -fx-background-color: #607D8B;
+}
+
+#bnovo
+{
+    -fx-background-image: url("../icone/novo.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#balterar
+{
+    -fx-background-image: url("../icone/alterar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bapagar
+{
+    -fx-background-image: url("../icone/delete.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconfirmar
+{
+    -fx-background-image: url("../icone/confirmar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelar
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconsultar
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bselecionar
+{
+    -fx-background-image: url("../icone/selecionar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bentrar
+{
+    -fx-background-image: url("../icone/enter.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bsair
+{
+    -fx-background-image: url("../icone/sair.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#btelainicial
+{
+    -fx-background-image: url("../icone/inicio.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#baddhorario
+{
+    -fx-background-image: url("../icone/add.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bdelhorario
+{
+    -fx-background-image: url("../icone/del.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#buploadimagem
+{
+    -fx-background-image: url("../icone/upload.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcapturarimagem
+{
+    -fx-background-image: url("../icone/captura.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelarconsultafunc
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* --------------------------------------------------------------------------------------------------------------- */
+#bconsultarproduto
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelarconsultaprod
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#baddproduto
+{
+    -fx-background-image: url("../icone/add.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bdelproduto
+{
+    -fx-background-image: url("../icone/del.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconfirmarparcelas
+{
+    -fx-background-image: url("../icone/confirmar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelarparcelas
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelarconsultacompra
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconsultarcompra
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bselecionarcompra
+{
+    -fx-background-image: url("../icone/selecionar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bgerarparcelas
+{
+    -fx-background-image: url("../icone/gerar_parcela.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#baddparcela
+{
+    -fx-background-image: url("../icone/add.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bdelparcela
+{
+    -fx-background-image: url("../icone/del.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#balterarparcela
+{
+    -fx-background-image: url("../icone/alterar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+#bpesquisarproduto
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* TELA VENDER PRODUTOS */
+
+#balterartelavenda
+{
+    -fx-background-image: url("../icone/alterar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bestornovenda
+{
+    -fx-background-image: url("../icone/estorno2.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bselecionarvendavenda
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bgerarparcelasvenda
+{
+    -fx-background-image: url("../icone/gerarparcelasvenda.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconsultarprodutovenda
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#baddprodutovenda
+{
+    -fx-background-image: url("../icone/add.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bdelprodutovenda
+{
+    -fx-background-image: url("../icone/del.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bnovavenda
+{
+    -fx-background-image: url("../icone/novo.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bsairvenda
+{
+    -fx-background-image: url("../icone/ret.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconfirmarvenda
+{
+    -fx-background-image: url("../icone/confirmar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* TELA CONSULTAR VENDA */
+#bcancelarvendavender
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bcancelarvenda
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconsultarvenda
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bselecionarvenda
+{
+    -fx-background-image: url("../icone/selecionar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* TELA CONSULTAR PRODUTO */
+
+#bcancelarproduto
+{
+    -fx-background-image: url("../icone/cancelar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bconsultarproduto
+{
+    -fx-background-image: url("../icone/consultar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+#bselecionarproduto
+{
+    -fx-background-image: url("../icone/selecionar.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.45368916797488223" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="639.0" prefWidth="750.0" stylesheets="@css/jfoenix-components.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prjmercadocaiçara.ui.TelaProdutoController">
+   <items>
+      <VBox fx:id="pndados" prefHeight="286.0" prefWidth="748.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="39.0" prefWidth="598.0" spacing="30.0" style="-fx-background-color: #607D8B;">
+               <children>
+                  <JFXButton fx:id="bnovo" onAction="#evtNovo" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="balterar" layoutX="10.0" layoutY="10.0" onAction="#evtAlterar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="bapagar" layoutX="55.0" layoutY="10.0" onAction="#evtApagar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="bconfirmar" layoutX="100.0" layoutY="10.0" onAction="#evtConfirmar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+                  <JFXButton fx:id="bcancelar" layoutX="145.0" layoutY="10.0" onAction="#evtCancelar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></JFXButton>
+               </children>
+            </HBox>
+            <GridPane prefHeight="225.0" prefWidth="728.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="352.0" minWidth="10.0" prefWidth="322.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="10.0" prefWidth="286.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="10.0" prefWidth="140.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="23.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <JFXTextField fx:id="txcodigo" labelFloat="true" prefHeight="29.0" prefWidth="152.0" promptText="Código" GridPane.rowIndex="1" />
+                  <JFXTextField fx:id="txdescricao" labelFloat="true" prefHeight="31.0" prefWidth="441.0" promptText="* Descrição" GridPane.columnSpan="3" GridPane.rowIndex="2" />
+                  <JFXTextField fx:id="txvalorunidade" labelFloat="true" prefHeight="31.0" prefWidth="441.0" promptText="* Valor Unidade" GridPane.rowIndex="3" />
+                  <JFXTextField fx:id="txqtd" labelFloat="true" prefHeight="31.0" prefWidth="369.0" promptText="* Quantidade" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" />
+                     </GridPane.margin></JFXTextField>
+                  <VBox alignment="CENTER" prefHeight="11.0" prefWidth="578.0" GridPane.columnSpan="3">
+                     <children>
+                        <Label text="Dados do Produto">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <JFXComboBox fx:id="cbtipo" labelFloat="true" prefHeight="25.0" prefWidth="245.0" promptText="Tipo Produto" />
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox fx:id="pnpesquisa" prefHeight="300.0" prefWidth="748.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="748.0" spacing="10.0" style="-fx-background-color: #607D8B;">
+               <children>
+                  <JFXTextField fx:id="txinfo" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="403.0" promptText="Informação" style="-fx-background-color: lightgray;">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="cbfiltro" focusColor="#f9fafc" labelFloat="true" prefHeight="25.0" prefWidth="200.0" promptText="Filtro" style="-fx-background-color: lightgray;">
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding></JFXComboBox>
+                  <JFXButton fx:id="bconsultar" onAction="#evtConsultar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="bselecionar" layoutX="10.0" layoutY="10.0" onAction="#evtSelecionar" prefWidth="50.0" text=" " textFill="#f8f6f6">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></HBox>
+            <ScrollPane prefHeight="274.0" prefWidth="748.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <TableView fx:id="tabela">
+                          <columns>
+                            <TableColumn fx:id="colcodigo" prefWidth="58.0" text="Código" />
+                            <TableColumn fx:id="coldescricao" prefWidth="308.0" text="Descrição" />
+                              <TableColumn fx:id="colvalorunidade" prefWidth="202.0" text="Valor Unidade" />
+                              <TableColumn fx:id="colqtd" prefWidth="202.0" text="Quantidade" />
+                              <TableColumn fx:id="coltipocod" prefWidth="200.0" text="Código Tipo" />
+                              <TableColumn fx:id="coltipodescricao" prefWidth="202.0" text="Tipo Produto" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </items>
+</SplitPane>
